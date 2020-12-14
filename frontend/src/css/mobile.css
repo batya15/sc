@@ -1,0 +1,669 @@
+@media screen and (max-device-width: 640px) {
+  :root {
+    --globalPadding: 5vw;
+  }
+
+  body {
+    font-size: 2.5em;
+    line-height: 1.8em !important;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 0.5em;
+  }
+
+  .email {
+    font-size: 1em;
+  }
+
+  .hCategory {
+    display: block !important;
+    width: 100%;
+    margin: calc(var(--globalPadding)*2) 0 calc(var(--globalPadding)*2) 0;
+    background: none;
+    float: left;
+    clear: both;
+    font-size: 1.8em !important;
+  }
+
+  .bgColor {
+    background: none !important;
+    display: inline !important;
+  }
+
+  .lifePhotos {
+    margin: 0 0 0vw 0 !important;
+    width: 150vw !important;
+  }
+
+  h3 {
+    margin-top: 1vw !important;
+    font-size: 0.6em;
+  }
+
+  .padAchievements h1 {
+    padding-top: 62px;
+    margin: 1px 0 80px 0 !important;
+  }
+
+  .pad h1 {
+    font-size: 7vw;
+  }
+
+  .preloaderLogo {
+    left: 42vw;
+  }
+
+  .logosLine {
+    height: 15vh;
+    margin-top: calc(-1*var(--globalPadding)) !important;
+  }
+
+  .logoFooter {
+    margin: 13vw 0 0 0;
+    width: 53vw !important;
+  }
+
+  p {}
+
+  .pad {
+    width: 88vw;
+  }
+
+  .padContacts {
+    margin-top: -2vw !important;
+  }
+
+  .padLogos {
+    margin-top: 4vw !important;
+    float: left;
+  }
+
+  .container {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .bgBlue {
+    padding-top: 35vw;
+  }
+
+  .sky-video {
+    background-size: cover !important;
+  }
+
+  .decor__sculpture {
+    display: none;
+  }
+
+  .hidden {}
+
+  .marginA {
+    margin: 0 0 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .marginB {
+    margin: 0 0 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .marginMobile {
+    margin: calc(var(--globalPadding)*2) 0 calc(var(--globalPadding)*2) calc(var(--globalPadding)*2) !important;
+  }
+
+  .padVacancy {
+    width: 90vw;
+    font-size: 1.5em !important;
+    margin: auto 0 14vw 0vw !important;
+    border-radius: 0 !important;
+    padding: 8vw 0 8vw calc(2*var(--globalPadding)) !important;
+  }
+
+  .padVacancy p {
+    display: block !important;
+    font-size: 0.65em !important;
+    width: 75vw !important;
+  }
+
+  .padVacancy>a {
+    display: block !important;
+    border-bottom: none !important;
+    float: left;
+    padding-top: 6vw;
+  }
+
+  .vacancySelected {
+    background-color: #fc0;
+    box-shadow: 0px 8px 128px #ffcc00;
+  }
+
+  .vacancySelectedMenu {
+    display: inline-block;
+    font-size: 0.8em;
+    box-shadow: none;
+    padding: 7vw;
+    border-radius: 94px;
+    background: var(--colorMainBG);
+    width: auto !important;
+    margin-left: -7vw !important;
+  }
+
+  .padSupremes {
+    padding: calc(var(--globalPadding)*2) var(--globalPadding) 10vh 0 !important;
+    width: calc(100vw - var(--globalPadding));
+    background: none !important;
+    background-color: var(--colorMainBG) !important;
+    margin: 0 0 0 0 !important;
+    float: left;
+  }
+
+  .number_two, .number_four, .number_three {
+    display: none;
+  }
+
+  .btnSendCV {
+    margin: 0 4vw 4vw 4vw !important;
+    width: 80vw !important;
+    padding: 8vw 6vw 9vw 6vw !important;
+    font-size: 1.2em;
+    text-align: center;
+    box-shadow: 0px 34px 88px #ADA194, inset 0 -16px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .phone, .contacts {
+    text-align: left;
+    width: 90vw;
+    font-size: 1.4em !important;
+    margin: var(--globalPadding) !important;
+    padding-left: var(--globalPadding) !important
+  }
+
+  .product {
+    display: block !important;
+    float: left;
+    border-radius: 0;
+    width: 100vw;
+    margin: 0 0 0 0;
+    padding-bottom: calc(var(--globalPadding)*2);
+    box-shadow: none !important;
+    height: auto !important;
+    position: relative;
+  }
+
+  .padHR>.itemText {
+    margin-top: 20vw !important;
+  }
+
+  .productText {
+    position: relative;
+    clear: both;
+    width: 82vw !important;
+    float: left !important;
+    left: auto !important;
+    top: auto !important;
+    font-family: 'Montserrat', sanf-serif !important;
+    padding: 0 0 10vw calc(var(--globalPadding)*2) !important;
+    height: inherit !important;
+    margin-top: 5% !important;
+  }
+
+  .productExtra {
+    font-size: 0.9em;
+    clear: both;
+    color: #333;
+    background-color: white;
+    width: 80vw;
+    padding: 5vw 10vw 5vw 10vw;
+    margin-bottom: -10vw;
+    border-radius: 0;
+    display: none;
+  }
+
+  .product>img {
+    display: block;
+    clear: both;
+    float: left;
+    width: 80%;
+    padding: 5vw 10vw 0 10%;
+  }
+
+  .product>p {
+    display: block;
+    float: left;
+    width: 80%;
+    font-size: 1.5em;
+    padding: 5% 0 15% 10%;
+  }
+
+  .arrowProducts {
+    margin: 0 0 0 0 !important;
+    bottom: -90px;
+    padding: 30px 30px !important;
+    background-color: white;
+    border-radius: 264px;
+    width: 112px !important;
+    z-index: 99999;
+  }
+
+  .check {
+    display: none;
+  }
+
+  .decorRight, .logoCircle {
+    display: none;
+  }
+
+  .decorBigMechanism {
+    transform: scale(2);
+  }
+
+  .photoCEOShadow {
+    display: none;
+  }
+
+  .decorProducts {
+    display: none;
+  }
+
+  .alignRight, .footerSocial {
+    float: left !important;
+    text-align: left !important;
+  }
+
+  .footerSasha {
+    padding: 26vw 0 0 0 !important;
+    float: left;
+    width: 15vw;
+    margin-left: -2vw;
+  }
+
+  .footerSashaText {
+    float: left !important;
+    margin-top: 2vw !important;
+  }
+
+  .padFooter {
+    font-size: 1em !important;
+  }
+
+  .footerSocial {
+    transform: scale(3) !important;
+    margin-right: 4vw !important;
+    padding: 0 4vw 0 2vw !important;
+  }
+
+  .vacancySelectedMenu {
+    width: 100%;
+  }
+
+  .item {
+    float: left;
+    width: 80vw;
+    padding: 0 var(--globalPadding) var(--globalPadding) calc(var(--globalPadding)*2) !important;
+    margin: 0 !important;
+  }
+
+  .padSupremes .itemHalf {
+    clear: both;
+    width: calc(100vw - var(--globalPadding)*4) !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  .itemHalf {
+    clear: both;
+    width: calc(100vw - var(--globalPadding)*4) !important;
+    margin: 0;
+  }
+
+  .itemText {
+    width: calc(100vw - var(--globalPadding)*5);
+  }
+
+  .photoMask {
+    -webkit-clip-path: url(#maskHex);
+    clip-path: url(#maskHex);
+    width: 85vw;
+    padding: 0;
+    margin: -10vw 0 -40vw 5vw !important;
+  }
+
+  .sign {
+    margin: 10vw 0 10vw 0;
+    width: 45vw;
+  }
+
+  .blink {
+    opacity: 1 !important;
+  }
+
+  .product__link {
+    margin: calc(var(--globalPadding)*2) 50% calc(var(--globalPadding)*2) 0;
+    font-size: 5vw !important;
+    padding: 32px 58px 32px 58px !important;
+    border-radius: 72px;
+  }
+
+  .photoTeam {
+    display: none;
+    margin: 0;
+  }
+
+  .photoHex {
+    width: 80vw !important;
+    margin: -8vh 0 8vh 0;
+    padding-bottom: 8vh;
+  }
+
+  .photoStudy {
+    position: relative;
+    width: 80vw !important;
+    margin: 2vh 0 2vh -10vw !important
+  }
+
+  .bg__mask_circle {
+    display: none;
+  }
+
+  .iconBG {
+    width: 64px;
+  }
+
+  path {
+    transform: scale(1.9)
+  }
+
+  .linkHR {
+    font-size: 1.1em !important;
+    padding: 32px 48px !important;
+    margin: var(--globalPadding) 20% 4vw -48px !important;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .linkHR a {
+    border-bottom: 2px solid black !important;
+  }
+
+  .photoCEO {
+    width: 80vw;
+    padding: 0 0 0 0 !important;
+    margin: 0 !important;
+  }
+
+  .hTeam {
+    display: block;
+    z-index: 9999;
+    margin-left: 10vw;
+  }
+
+  .brandFont {
+    margin-bottom: calc(var(--globalPadding)*4);
+    margin-left: -3vw !important;
+    font-size: 0.9em;
+  }
+
+  .brandFont li:before {
+    margin: 0 0 0 -1.5em !important;
+  }
+
+  .number_one {
+    display: none;
+  }
+
+  .photoOffice {
+    position: relative;
+    float: left;
+    clear: both;
+    margin: -1% 0 5% 0;
+    padding: 0;
+    border-radius: 0;
+    width: 100vw;
+    height: 70vw !important;
+    background-size: cover !important;
+    box-shadow: none;
+  }
+
+  .padAchievements {
+    width: calc(100vw - var(--globalPadding)*4);
+    padding: 0 calc(var(--globalPadding)) var(--globalPadding) calc(var(--globalPadding)) !important;
+    margin: calc(var(--globalPadding)*2) 0 0 calc(var(--globalPadding)) !important;
+  }
+
+  .padHR {
+    padding-bottom: calc(var(--globalPadding)*2) !important;
+  }
+
+  .hrBTN {
+    margin: 52% 0 -80px 28% !important;
+    width: 20vw !important;
+  }
+
+  .achBlock {
+    width: 100%;
+  }
+
+  .achNumbers {
+    width: 100%;
+    font-size: 2em;
+  }
+
+  .achText {
+    width: 100%;
+    font-size: 1em;
+    line-height: 1.3em !important;
+  }
+
+  .logoGreyNotext {
+    display: none;
+  }
+
+  .decor__line {
+    display: none;
+  }
+
+  .menuGlow {
+    display: none;
+  }
+
+  .menuTop {
+    margin-top: -100vh;
+    transition: all ease 300ms !important;
+  }
+
+  .menuBG {
+    transition: all ease 600ms;
+    display: none;
+    position: fixed;
+    opacity: 0;
+    background-color: var(--colorOldBlue);
+    z-index: 9998;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    height: 100vh;
+  }
+
+  .menuTop a {
+    color: white;
+    display: block;
+    clear: both;
+    font-size: 3em !important;
+    line-height: 3em !important;
+  }
+
+  .menu {
+    width: 7vw !important;
+    height: auto;
+    top: 5vw;
+    left: inherit !important;
+    right: 3vw !important;
+  }
+
+  .menu:hover {
+    top: 5vw !important;
+    left: iherit !important;
+    background-color: transparent !important;
+    padding: 1vw !important;
+    box-shadow: none !important;
+  }
+
+  .menu:hover path {
+    transition: all ease 200ms;
+    stroke: black !important;
+  }
+
+  .lang {
+    width: 80vw !important;
+    margin: 10vh 0 0 var(--globalPadding) !important;
+  }
+
+  .lang__selected {
+    display: inline-block !important;
+    font-size: 3em !important;
+    padding: 3vw 4vw !important;
+    margin-right: 3vw !important;
+  }
+
+  .lang>a {
+    display: inline-block !important;
+    margin-right: 3vw !important;
+  }
+
+  .instruments img {
+    float: left;
+    height: 100px;
+    padding: 5%;
+  }
+
+  .logo {
+    width: 80vw;
+    margin: 10vw 0 0 calc(var(--globalPadding)*2);
+  }
+
+  .topTextThree {
+    margin: 0 0 var(--globalPadding) 0;
+  }
+
+  .topText {
+    margin: 10vw 0 0 0 !important;
+  }
+
+  .itemThird {}
+
+  .contactsPhone {
+    font-size: 1.7em !important;
+  }
+
+  .contactsPhone>a {
+    font-size: 0.8em !important;
+  }
+
+  .contactsPhoto {
+    display: none;
+  }
+
+  .contactsInfo {
+    font-size: 1.4em !important;
+  }
+
+  .notify {
+    display: none;
+    margin: 0 0 0 -10vw !important;
+    padding: 4vw !important;
+    font-size: 2em;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .icon {
+    width: 50vw;
+  }
+
+  .logoPixel {
+    display: none;
+  }
+
+  .mobileHide {
+    display: none;
+  }
+
+  li {
+    font-size: 1em !important;
+    padding-bottom: 4vw;
+  }
+
+  ul {
+    display: block;
+    width: 80vw;
+    float: left;
+  }
+
+  li:before {
+    margin: 0 0 22px -6.9vw !important;
+  }
+
+  .padStudy li {
+    font-size: 1.8em;
+    line-height: 1.4em;
+  }
+
+  .padStudy ul {
+    display: block;
+    width: 70vw;
+    float: left;
+    margin-left: -12vw;
+  }
+
+  li:before {
+    content: "— ";
+    margin: 0 0 22px -58px;
+  }
+
+  .text-intro {
+    font-size: 1.2em !important;
+    font-family: RFDewiExpanded-Regular !important;
+    margin: 0 0 12vw 0 !important;
+    float: left;
+  }
+
+  .padVacancyMenu {
+    padding: 0 !important;
+    width: 95vw !important;
+    margin: 0 0 var(--globalPadding) var(--globalPadding) !important
+  }
+
+  .padVacancyMenu>a {
+    transition: all ease 200ms;
+    line-height: 1.1em !important;
+    color: black;
+    padding: 5vw;
+    display: block;
+    text-decoration: none;
+    color: black;
+    width: 75vw;
+    height: 140px;
+    float: left;
+  }
+
+  .padVacancyMenu>a:hover {
+    transition: all ease 200ms;
+    background-color: #fc0;
+    box-shadow: 0px 8px 128px #ffcc00;
+  }
+
+  .vacancyDescr {
+    padding: 12vw !important;
+    background-color: #FCFCFA !important;
+  }
+
+  .marginKill {
+    margin: 0 0 10vw 0 !important;
+    padding: 0 !important;
+  }
+}

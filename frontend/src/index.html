@@ -1,0 +1,712 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="https://www.w3.org/1999/xhtml">
+
+ <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <title>Solit Clouds</title>
+   <meta property="og:type" content="website" />
+   <meta property="og:image" content="i/fb_preview.jpg" />
+   <meta property="og:title" content="Solit Clouds" />
+   <meta property="og:description" content="Разработка программного обеспечения" />
+   <link rel="icon" type="image/png" href="i/favicon.png" />
+
+   <link href="css/desktop.css" rel="stylesheet" type="text/css" />
+   <link href="css/form.css" rel="stylesheet" type="text/css" />
+   <link href="css/mobile.css" rel="stylesheet" type="text/css" />
+
+   <meta name="description" content="Solit Clouds" />
+   <meta name="keywords" content="разработка, по, программное обеспечение" />
+
+   <meta name="theme-color" content="#1a7ff6" />
+
+   <script src="js/jquery.min.js"></script>
+   <script src="js/java.js"></script>
+   <script src="js/form-contact.js"></script>
+ </head>
+
+ <body id="topOfTheWorld" onload="pageLoaded(); resize();" onresize="resize();">
+
+
+
+   <div class="preloader">
+     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" class="preloaderLogo">
+       <style type="text/css">
+         .st0 {
+           fill: none;
+           stroke: #FFFFFF;
+           stroke-width: 12;
+           stroke-miterlimit: 10;
+         }
+       </style>
+       <path clip-path="url(#logoPath)" class="st0" d="M75.66,11.59C72.71,9.64,69.18,8.5,65.38,8.5c-10.29,0-18.62,8.34-18.62,18.62s-8.34,18.62-18.62,18.62
+    S9.5,37.41,9.5,27.12S17.84,8.5,28.12,8.5c4.03,0,7.76,1.28,10.8,3.45" />
+       <path clip-path="url(#logoPath)" class="st0" d="M75.61,42.45c-2.32,1.14-7.31,3.3-10.24,3.3c-3.59,0-6.94-1.01-9.78-2.77" />
+     </svg>
+   </div>
+
+
+   <div class="guides"></div>
+   <div class="guides2"></div>
+
+   <!-- Форма заказа -->
+
+   <div class="padContact" id="padContact">
+     <div class="padFields">
+       <div class="frm-container">
+         <div class="frm-item">
+           <div class="frm-label">
+             Имя и фамилия
+           </div>
+           <div class="frm-input">
+             <input type="text" id="formClientName">
+           </div>
+         </div>
+         <div class="frm-item">
+           <div class="frm-label">
+             Телефон или Телеграм
+           </div>
+           <div class="frm-input">
+             <input type="text" id="formClientEmail" onkeyup="CheckEmail();" onChange="CheckEmail();">
+           </div>
+         </div>
+         <div class="frm-item">
+           <div class="frm-label">
+             Позиция
+           </div>
+           <div class="frm-input">
+             <input type="text" id="formServiceType">
+           </div>
+         </div>
+         <div class="frm-item">
+           <div class="frm-label">
+             Сопроводительное письмо
+           </div>
+           <textarea id="formComment"></textarea>
+         </div>
+         <div class="frm-item" style="margin-top: 28px">
+           <div class="frm-upload-button" onclick="">
+             <img src="i/upload.svg" class="frm-upload-img">Прикрепить&nbsp;резюме
+           </div>
+         </div>
+         <div class="frm-item" style="margin-top: 28px">
+           <div class="frm-send-button" id="frm-sim-send" onclick="SendSIMRequest()">
+             Отправить
+           </div>
+         </div>
+       </div>
+       <div class="close">
+         <img id="btnClose" src="i/close_black.png" width="100%" onclick="padContactHide();" />
+       </div>
+     </div>
+   </div>
+   <!-- Конец формы заказа -->
+
+
+
+   <div class="sky-video"></div>
+   <div class="bgBlue">
+     <!--  <img src="i/circle_blue.svg">-->
+   </div>
+
+   <div class="menuBG" onmousedown="hideMenu();"></div>
+
+   <div class="menuGhost" onmouseover="showMenu()" onmouseout="hideMenu()"></div>
+
+   <div class="menu" onmouseover="showMenu()" onmousedown="showMenu()">
+     <svg width="100%" height="100%" viewBox="0 0 32 16" xmlns="http://www.w3.org/2000/svg">
+       <path d="M0 1H32" stroke="black" />
+       <path d="M0 8H32" stroke="black" />
+       <path d="M0 15H32" stroke="black" />
+     </svg>
+   </div>
+
+
+   <img src="i/logo.svg" class="logo" />
+
+   <div class="menuGlow" onmouseout="hideMenu();"></div>
+
+   <div class="menuTop" onmouseover="showMenu()">
+     <a href="#about">О компании</a>
+     <a href="#products">Продукты/Услуги</a>
+     <a href="#career">Карьера</a>
+     <a href="#contacts">Контакты</a>
+
+     <div class="lang">
+       <div class="lang__selected">Ru</div>
+       <a href="en">En</a>
+     </div>
+   </div>
+
+
+
+   <div class="container">
+
+
+     <h1 class="item marginA topText fx">
+       <div class="topTextOne">Мы создаем it<nobr>-решения,</nobr>
+       </div>
+       <div class="topTextTwo">которые <span style="color: white">делают</span></div>
+       <div class="topTextThree"><span style="color: white">мир лучше<span class="blink">_</span></span></div>
+     </h1>
+
+
+     <div class="item marginA text-intro">
+       <img src="i/number_one.svg" class="number_one">
+       С 2006 года мы разрабатываем программное обеспечение и продаем лицензии на ПО собственной разработки.
+     </div>
+
+     <div class="item marginB itemHalf" id="about">
+       <h1 style="color: black;">В Solit Clouds обращаются<br>за</h1>
+     </div>
+
+     <div class="item itemText brandFont" style="color: white;">
+       <ul>
+         <li>Разработкой программного обеспечения</li>
+         <li>Лицензией на ПО нашей разработки</li>
+         <li>Разработкой и технической поддержкой масштабных информационных систем</li>
+         <li>IT-консалтингом</li>
+       </ul>
+     </div>
+
+     <div class="item marginB itemHalf decor__line"></div>
+
+
+     <img src="i/bg_mask_circle.svg" class="bg__mask_circle">
+
+     <img src="i/logo_blue.svg" class="logoPixel">
+
+     <img src="i/thinker_2.png" class="decor__sculpture" id="decor__sculpture">
+   </div>
+
+
+
+   <div class="container">
+
+     <div class="pad padSupremes">
+
+       <div class="item marginA">
+         <img src="i/number_two.svg" class="number_two">
+         <h1>Наши преимущества</h1>
+       </div>
+
+       <div class="item itemHalf marginA">
+         <img src="i/icon_team.svg" class="icon">
+         <p>Мы — слаженная высококвалифицированная команда
+         </p>
+       </div>
+
+       <div class="item itemHalf paddingBottom">
+         <img src="i/icon_cloud.svg" class="icon">
+         <p>Используем современные технологии и производственные практики
+         </p>
+       </div>
+
+       <div class="item itemHalf paddingBottom marginA">
+         <img src="i/icon_box.svg" class="icon">
+         <p><b>Обеспечиваем полный цикл разработки ПО:</b> бизнес и системный анализ, проектирование интерфейсов, разработка, тестирование, внедрение, сопровождение
+         </p>
+       </div>
+
+       <div class="item itemHalf">
+         <img src="i/icon_timer.svg" class="icon">
+         <p>Работаем качественно и в сжатые сроки
+         </p>
+       </div>
+
+       <div class="item itemHalf paddingBottom marginA">
+         <img src="i/icon_pro.svg" class="icon">
+         <p>Гарантируем профессиональную экспертизу
+         </p>
+       </div>
+
+       <div class="photoTeam parallax">
+         <img src="i/team.png" class="photoHex">
+       </div>
+
+     </div>
+
+     <img src="i/logoyellow.jpg" class="logoYellow">
+     <h1 class="hTeam">НАША<br>КОМАНДА</h1>
+
+     <div class="item marginB itemHalf">
+
+       <img src="i/ceo_2.png" class="photoCEO">
+
+     </div>
+
+     <div class="item itemText">
+       <p>Solit Clouds объединяет настоящих профессионалов в высококлассную команду, способную выполнять задачи любой сложности и неизменно демонстрировать отличное качество работы. У нас много крутых проектов, мы растем и готовы принимать в свой
+         коллектив таких же энергичных и целеустремлённых людей, которые постоянно идут вперед и стремятся к развитию.
+       </p>
+       <p>
+         Мы открываем возможности для профессионального роста и заботимся о внутренней атмосфере в компании. Все, что мы делаем,
+         соответствует нашей философии «делать мир лучше». С нами у тебя – океан возможностей.
+       </p>
+       <p><a href="#" onclick="padContactShow()" class="joinLink">Присоединяйся!</a></p>
+       <p>
+       <p class="personName">Александр<br>Носков</p>
+       <small>Генеральный директор</small>
+     </div>
+
+
+     <div class="pad padAchievements">
+       <div class="marginB">
+
+         <img src="i/number_four.svg" class="number_four">
+         <h1 style="margin: -13vw 0 15vw 0;" class="hCategory">Наши<br>достижения</h1>
+
+         <div class="arrows">
+           <img src="i/arrow.png" class="arrow arrowLeft">
+           <img src="i/arrow.png" class="arrow">
+
+         </div>
+         <img class="photoOffice">
+
+
+         <img src="i/logo_grey_notext.svg" class="logoGreyNotext">
+
+
+
+         <div class="achBlock">
+           <div class="achNumbers">14</div>
+           <div class="achText">лет на рынке</div>
+         </div>
+
+         <div class="achBlock">
+           <div class="achNumbers">10 000 000</div>
+           <div class="achText">пользователей наших продуктов</div>
+         </div>
+
+         <div class="achBlock">
+           <div class="achNumbers">160</div>
+           <div class="achText">организаций нас рекомендуют</div>
+         </div>
+
+         <div class="achBlock">
+           <div class="achNumbers">650</div>
+           <div class="achText">проектов</div>
+         </div>
+
+       </div>
+     </div>
+
+     <h1 class="marginA hCategory marginMobile" id="products">Продукты<br>и услуги</h1>
+
+     <div class="pad padProducts marginB">
+
+
+
+       <!--<svg class="decorProducts" viewBox="0 0 312 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="39.5" cy="39.5" r="27.5" stroke-width="24" />
+          <rect x="126.111" y="12" width="55" height="55" stroke-width="24" />
+          <path d="M237 74.6112L302.833 8.77783" stroke-width="24" />
+          <path d="M302.833 74.6111L237 8.77775" stroke-width="24" />
+        </svg>-->
+
+
+       <div class="product" style="background-color: var(--colorMain); background: url('src/i/bg_2c.gif');
+        background-size: cover; box-shadow: 0 64px 96px #1884F2, inset 0 -32px 64px rgba(255,255,255,0.5);">
+         <img src="i/logo_emias.png" class="productImage">
+         <div class="productText">
+           <p><b>ЕМИАС</b> — Единая медицинская информационно-аналитическая система.</p>
+           <p>Продукт создан для автоматизации работы персонала медучреждений, управления расписанием врачей и приемом пациентов, составления протоколов осмотра, отправки результатов исследований, регистрации визитов врачей на дом, работы с
+             медкартами,
+             листками нетрудоспособности и многое другое. Мы абсолютно уверены, что вместе с Правительством Москвы мы создаем лучшую медицинскую систему.</p>
+         </div>
+         <div class="productExtra">
+           <p>
+           <h2>Продукты</h2>
+           </p>
+           <p><b>Для медицинского персонала</b></p>
+           <p>Врач — создан для автоматизации работы врачей: все данные, полученные на приеме, а также протокол осмотра и назначения, сохраняются в электронной медицинской карте, к которой у пациента есть доступ через портал Mos.ru;
+           </p>
+           <p>Расшифровка — создан для автоматизации работы с данными инструментальной диагностики. С нашей программой уже работают все государственные поликлиники при создании протоколов инструментальных исследований;
+           </p>
+           <p>Регистр.АПЦ — всего за три недели мы создали систему, способную охватить весь поток ковидных больных в Москве: в ней фиксируются новые случаи коронавирусной инфекции, носители которой распределяются для регистрации и поддержки по
+             медучреждениям столицы, ведется учет их состояния, и в случае необходимости направляется сигнал для вызова врача на дом.</p>
+
+           <p><b>Для немедицинского персонала</b></p>
+
+           <p>Регистратура — создан для автоматизации услуг консультационного характера немедицинского персонала: фиксирует данные по расписанию врачей, кабинетов, а также позволяет составлять маршрутизацию пациента;
+             Организационно-методический отдел — создан для автоматизации работы всего медучреждения: здесь фиксируются данные по расписанию медперсонала, закрепляются участковые врачи за своими участками, вносятся данные по рабочим сменам и
+             отпускам — вся информация, лежащая в основе сложной и многоуровневой структуры, которой является поликлиника;
+             Конструктор шаблонов пакетов — создан для оптимизации работы врача: здесь настраиваются шаблоны пакетных назначений, исследований и процедур;
+             Картохранилище — создан для работы с бумажными картами, которыми еще продолжают пользоваться в медучреждениях. Благодаря нашей системе в Москве на 80% сократилась потеря медицинских карт: любое движение документа фиксируется, ведется
+             учет лиц и времени использования карты.
+           </p>
+
+           <p>Организационно-методический отдел — создан для автоматизации работы всего медучреждения: здесь фиксируются данные по расписанию медперсонала, закрепляются участковые врачи за своими участками, вносятся данные по рабочим сменам и
+             отпускам — вся информация, лежащая в основе сложной и многоуровневой структуры, которой является поликлиника;
+           </p>
+           <p>Конструктор шаблонов пакетов — создан для оптимизации работы врача: здесь настраиваются шаблоны пакетных назначений, исследований и процедур;
+           </p>
+           <p>Картохранилище — создан для работы с бумажными картами, которыми еще продолжают пользоваться в медучреждениях. Благодаря нашей системе в Москве на 80% сократилась потеря медицинских карт: любое движение документа фиксируется, ведется
+             учет лиц и времени использования карты.
+
+           <p><b>Для пациентов</b></p>
+           <p>Инфомат — создан для установленных в медучреждениях аппаратов самозаписи пациентов на прием к врачу, а также выдачи талонов посещения. Ежедневно наш продукт используют до 120 000 в день и 3 500 000 запросов в месяц на идентификацию
+             пациентов.
+           </p>
+
+           <p><b>Для реализации бизнес-логики</b></p>
+           <p>ЕМИАС.Уведомления — создан для отправки уведомлений пациентам, зарегистрированных в системе: через нее ежегодно проходит больше миллиона уведомлений о лабораторных и инструментальных исследованиях и более 1,5 миллионов писем.
+           </p>
+         </div>
+         <img src="i/plus.png" class="arrowProducts">
+       </div>
+
+       <div class="product" style="background-color: var(--colorMain); background: url('src/i/bg_ehr_minimized.gif');
+        background-size: cover; box-shadow: 0 64px 96px #6d3fa2, inset 0 -32px 64px rgba(255,255,255,0.5);">
+         <img src="i/logo_ehr.png" class="productImage">
+         <div class="productText">
+           <b>EHR — высокопроизводительное решение обработки больших данных</b>
+           <p>Продукт создан для обработки, хранения и управления большими данными на основании стандарта управления объемом медицинской информации openEHR.
+           </p>
+           <a href="https://ehr.solutions" class="product__link" style="background-color: #fc0; color: black;">ehr.solutions</a>
+         </div>
+         <div class="productExtra">
+           <p></p>
+           <p><b>EHR DB</b> — система хранения и управления данными в формате openEHR, которую планируется внедрить во всех стационарах Москвы.</p>
+           <p><b>EHR Forms</b> — гибкий инструмент для быстрого создания пользовательских приложений, визуальный редактор форм (WISYWIG). Позволяет в 10 раз быстрее создавать интерфейс из различных визуальных компонентов для формирования openEHR
+             документов.
+           </p>
+         </div>
+         <img src="i/plus.png" class="arrowProducts">
+       </div>
+
+
+
+       <div class="product" style="background-color: #FFD747; background: url('src/i/bg_idvp.gif');
+        background-size: cover;box-shadow: 0 64px 96px #ffa200, inset 0 -32px 64px rgba(255,255,255,0.5); color: black;">
+         <img src="i/logo_idvp.png" class="productImage">
+         <div class="productText">
+           <b>iDVP — Interactive Data Visualization Platform</b>
+           <p>
+             Продукт создан для сбора больших объемов данных, их хранения, обработки, анализа и презентации.
+           </p>
+
+
+           <a href="https://idvp/io" class="product__link" style="background-color: white; color: black;">idvp.io</a>
+         </div>
+         <div class="productExtra">
+           <p><b>Data</b> — система для хранения и обработки данных, позволяет работать с любыми известными носителями и источниками информации, которую сводит в один общий отчет. Продукт обеспечивает насыщение данными всех потребителей как внутри
+             экосистемы, так и вне ее.
+           </p>
+           <p> <b>Analitycs</b> — интерактивные дашборды для обработки, исследования и визуализации данных, собранных с помощью iDVP.Data.
+           <p> <b>3D</b> — система для создания трехмерной интерактивной инфографики, визуализации данных с применением геймификации и мультиплатформенной среды.
+           </p>
+         </div>
+         <img src="i/plus.png" class="arrowProducts">
+       </div>
+
+     </div>
+
+
+     <div class="item itemHalf padTech marginA">
+       <h1 class="hCategory">Технологический<br>стек</h1>
+       <p>Технологический стек позволяет нам браться и эффективно решать самые разнообразные задачи — от создания простых веб-сайтов до разработки сложных высоконагруженных систем.</p>
+       </p>
+       <img src='i/settings_blue.svg' class="decorRight">
+       <img src='i/logo_circle.png' class="logoCircle">
+
+     </div>
+
+
+     <img src='i/settings_fill.svg' class="decorBigMechanism">
+
+
+     <div class="item marginA instruments">
+       <h1 class="hCategory">Инструментарий</h1>
+
+       <img src="i/logos/1.png">
+       <img src="i/logos/2.png">
+       <img src="i/logos/3.png">
+       <img src="i/logos/4.png">
+       <img src="i/logos/5.png">
+       <img src="i/logos/6.png">
+       <img src="i/logos/7.png">
+       <img src="i/logos/8.png">
+       <img src="i/logos/9.png">
+       <img src="i/logos/10.png">
+
+       <img src="i/logos/11.png">
+       <img src="i/logos/12.png">
+       <img src="i/logos/13.png">
+       <img src="i/logos/14.png">
+       <img src="i/logos/15.png">
+       <img src="i/logos/16.png">
+       <img src="i/logos/17.png">
+       <img src="i/logos/18.png">
+       <img src="i/logos/19.png">
+       <img src="i/logos/20.png">
+
+       <img src="i/logos/21.png">
+       <img src="i/logos/22.png">
+       <img src="i/logos/23.png">
+       <img src="i/logos/24.png">
+       <img src="i/logos/25.png">
+       <img src="i/logos/26.png">
+       <img src="i/logos/27.png">
+       <img src="i/logos/28.png">
+       <img src="i/logos/29.png">
+       <img src="i/logos/30.png">
+
+       <img src="i/logos/31.png">
+       <img src="i/logos/32.png">
+       <img src="i/logos/33.png">
+       <img src="i/logos/34.png">
+       <img src="i/logos/35.png">
+       <img src="i/logos/36.png">
+       <img src="i/logos/37.png">
+       <img src="i/logos/38.png">
+       <img src="i/logos/39.png">
+       <img src="i/logos/40.png">
+
+     </div>
+
+     <!--  <div class="padLogos">
+
+        <img src="i/tech.jpg" class="logosLine" id="logosLine">
+      </div>-->
+
+     <div class="pad padHR">
+       <div class="item itemHalf">
+         <div class="photoHR">
+           <img src="i/hr.png" class="photoHex">
+         </div>
+         <div class="hrBTN"><img src="i/hr_telegram.svg" width="100%"></div>
+       </div>
+
+       <div class="item itemText" id="career">
+         <h3 style="text-transform: uppercase; letter-spacing: 0.4em;">Карьера</h3>
+         <a href="mailto:hr@solit-clouds.ru">
+           <h1 class="linkHR">
+             <nobr>hr@solit-clouds.ru</nobr>
+           </h1>
+         </a>
+         <p style="display: block; clear: both;">
+           Мы объединяем людей, которые могут создавать качественные и комплексные IT-решения для бизнеса. Мы совершенствуемся и открыты к развитию, чтобы лучше и быстрее принимать вызовы времени. Мы ценим профессионализм, взаимное уважение,
+           потенциал людей и командную работу. Мы поощряем новации и доверие в команде. Как результат — наши продукты обеспечивают для клиентов эффективное управление, простоту и удобство.
+
+         </p>
+         <p class="personName">Вера<br>Мухина</p>
+         <small>HR-директор</small>
+       </div>
+
+     </div>
+     <div class="padHRbottomDecor2"></div>
+     <div class="padHRbottomDecor"></div>
+
+     <div class="pad padStudy">
+       <div class="item itemHalf marginB">
+         <h1 class="hCategory bgColor">Обучение,<br> бенефиты,<br> преимущества работы у нас:
+           <br>
+         </h1>
+
+
+       </div>
+
+       <img src="i/study.png" class="photoHex photoStudy">
+
+       <div class="item marginB">
+         <div class="item itemHalf">
+           <ul>
+             <li>Продуктовые команды</li>
+             <li>Применение гибких методологий</li>
+             <li>Эффективные брейнстормы</li>
+             <li>Возможность обучения (конференции, митапы, сертификация)</li>
+             <li>Гибкое начало рабочего дня</li>
+
+           </ul>
+         </div>
+         <div class="item itemHalf">
+
+           <ul>
+             <li>ДМС</li>
+             <li>Программа по привлечению сотрудников</li>
+             <li>Корпоративные командные мероприятия</li>
+             <li>Свободный дресс-код</li>
+             <li>Комфортный офис с персональными местами и зоной коворкинга</li>
+
+           </ul>
+         </div>
+       </div>
+
+     </div>
+
+     <div class="item itemHalf marginA">
+       <h1 class="hCategory">Открытые<br>вакансии <span class="notify">5</span></h1>
+     </div>
+
+     <div class="pad item padVacancyMenu">
+
+
+       <a href="#vacancyDescr" class="vacancySelected">Аналитик данных<br><small>Москва/Ярославль</small></a>
+       <a href="#vacancyDescr">Системный аналитик<br><small>Москва/Санкт-Петербург/Ярославль</small></a>
+       <a href="#vacancyDescr">Разработчик Java<br><small>Москва/Ярославль/Дистанционно</small></a>
+       <a href="#vacancyDescr">Разработчик JS<br><small>Москва, Ярославль/Дистанционно</small></a>
+       <a href="#vacancyDescr">Тестировщик<br><small>Ярославль</small></a>
+
+     </div>
+
+     <div class="item itemHalf vacancyDescr">
+       <h3>Описание вакансии</h3>
+       <p>
+         Участие в проектировании и разработке высоконагруженных облачных решений
+         Предложение архитектурных и технических решений
+         Коммуникация с аналитиками: необходимо понимать бизнес-задачу и предлагать оптимальное техническое решение
+         Проектирование интерфейсов и сервисов внутреннего обмена данными
+         Контроль качества технических решений, разрабатываемых командой
+
+       </p>
+     </div>
+
+     <div class="pad padVacancy">
+       <div class="item itemHalf marginB marginKill">
+         <h3 class="vacancySelectedMenu" id="vacancyDescr">Задачи</h3><br>
+         <h3><a href="#">Мы ожидаем</a></h3><br>
+         <h3><a href="#">Знания технологий</a></h3><br>
+         <h3><a href="#">Будет плюсом</a></h3><br>
+         <h3><a href="#">Мы предлагаем</a></h3>
+       </div>
+
+       <div class="item itemHalf marginKill">
+         <p>Участие в проектировании и разработке высоконагруженных облачных решений</p>
+         <p>Предложение архитектурных и технических решений</p>
+         <p>Коммуникация с аналитиками: необходимо понимать бизнес-задачу и предлагать оптимальное техническое решение</p>
+         <p>Проектирование интерфейсов и сервисов внутреннего обмена данными</p>
+         <p>Контроль качества технических решений, разрабатываемых командой</p>
+       </div>
+     </div>
+
+     <div class="marginB">
+       <div class="btnSendCV" onclick="padContactShow()">Отправить резюме</div>
+
+
+       <div class="phone">8 495 970 25 11</div>
+       <div class="contacts"><a href="mailto:hr@solit-clouds.ru"><img src="i/icon_mail.png" class="iconBG">hr@solit-clouds.ru</a>
+         <br><br><a href="https://instagram.com/solitcluds"><img src="i/icon_insta.png" class="iconBG">@solitclouds</a>
+       </div>
+     </div>
+
+     <div class="padPhotos">
+       <img src="i/life_photos.jpg" style="width: 100vw" class="lifePhotos">
+     </div>
+
+
+     <div class="pad padContacts" id="contacts">
+       <div class="item itemHalf marginA">
+         <h1 class="hCategory bgColor">Контакты</h1>
+       </div>
+
+       <div class="item itemHalf">
+         <h1 class="contactsInfo">
+           <nobr>8 495 970 25 11</nobr><br>
+           <nobr><a href="mailto:info@solit-clouds.ru" class="email">info@solit-clouds.ru</a></nobr>
+         </h1>
+       </div>
+
+
+       <div class="marginA">
+         <div class="item itemThird">
+           <img src="i/msk.jpg" class="contactsPhoto">
+           <p class="contactsPhone">
+             <a href="#mapItself" onclick="showDiv('mapMoscow');">Москва</a><br>
+
+           </p>
+           <p>
+             127015, Москва<br>
+             ул. Новодмитровская 2 к 1<br>
+             БЦ «Савеловский Сити»
+           </p>
+         </div>
+
+         <div class="item itemThird">
+           <img src="i/spb.jpg" class="contactsPhoto">
+           <p class="contactsPhone"><a href="#mapItself" onclick="showDiv('mapSpb');">
+               <nobr>Санкт-Петербург</nobr></br>
+             </a><br>
+
+           </p>
+           <p>
+             197101, Санкт-Петербург<br>
+             ул. Рентгена, 7<br>
+             БЦ «Стельп»
+           </p>
+         </div>
+
+         <div class="item itemThird">
+           <img src="i/yar.jpg" class="contactsPhoto">
+           <p class="contactsPhone"><a href="#mapItself" onclick="showDiv('mapY');">Ярославль</br></a><br>
+
+           </p>
+           <p>
+             150000, Ярославль<br>
+             Октябрьский переулок, 11
+           </p>
+         </div>
+
+
+
+       </div>
+
+       <div class="pad padMap">
+         <div id="mapItself" style="position: absolute; float: left; margin-top: 100px;"></div>
+
+         <div style="position:relative;overflow:hidden;" class="mapMoscow"><a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a
+             href="https://yandex.ru/maps/213/moscow/house/novodmitrovskaya_ulitsa_2k1/Z04Ycw9pQEcFQFtvfXRxdXVgYg==/?ll=37.589923%2C55.804936&sll=39.882216%2C57.621388&sspn=0.020514%2C0.006816&utm_medium=mapframe&utm_source=maps&z=16.63"
+             style="color:#eee;font-size:12px;position:absolute;top:14px;">Новодмитровская улица, 2к1 — Яндекс.Карты</a><iframe
+             src="https://yandex.ru/map-widget/v1/?ll=37.589923%2C55.804936&mode=search&sll=39.882216%2C57.621388&sspn=0.020514%2C0.006816&text=127015%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%20%D1%83%D0%BB.%20%D0%9D%D0%BE%D0%B2%D0%BE%D0%B4%D0%BC%D0%B8%D1%82%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%202%20%D0%BA%201&z=16.63"
+             frameborder="0" allowfullscreen="true" style="position:relative;"></iframe></div>
+
+         <div style="position:relative;overflow:hidden;" class="mapSpb"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a
+             href="https://yandex.ru/maps/2/saint-petersburg/house/ulitsa_rentgena_7/Z0kYdQVhTUYPQFtjfXV3cnRlZw==/?ll=30.321437%2C59.963863&utm_medium=mapframe&utm_source=maps&z=16" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица
+             Рентгена, 7 на карте Санкт-Петербурга, ближайшее метро Петроградская — Яндекс.Карты</a><iframe
+             src="https://yandex.ru/map-widget/v1/?ll=30.321437%2C59.963863&mode=whatshere&whatshere%5Bpoint%5D=30.321438%2C59.963863&whatshere%5Bzoom%5D=17&z=16" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe></div>
+
+         <div style="position:relative;overflow:hidden;" class="mapY"><a href="https://yandex.ru/maps/16/yaroslavl/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Ярославль</a><a
+             href="https://yandex.ru/maps/16/yaroslavl/house/oktyabrskiy_pereulok_3/Z0AYfg9iS0QBQFttfXpzcH9rbA==/?ll=39.882216%2C57.621388&utm_medium=mapframe&utm_source=maps&z=16"
+             style="color:#eee;font-size:12px;position:absolute;top:14px;">Октябрьский переулок, 3 на карте Ярославля — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCQl7YfZKD" frameborder="0" allowfullscreen="true"
+             style="position:relative;"></iframe></div>
+
+
+
+       </div>
+
+
+     </div>
+
+
+     <div class="pad padFooter ">
+       <div class="item itemThird">
+         <img src="i/logo_black.svg" class="logoFooter">
+       </div>
+
+       <div class="item itemThird">
+         <p>© 2020 ООО «Солит Клаудз»<br>
+           Все права защищены</p>
+         <p></p>
+         <p><a href="#">ФЗ о персональных данных</a></p>
+       </div>
+
+       <div class="item itemThird alignRight">
+         <a href="#"><img src="i/icon_fb_footer.svg" class="footerSocial"></a>
+         <a href="#"><img src="i/icon_vk_footer.svg" class="footerSocial"></a>
+         <a href="#"><img src="i/icon_insta_footer.svg" class="footerSocial"></a>
+         <p>
+           <a href="https://karachinsky.ru"><img src="i/logo_karachinsky.png" class="footerSasha">
+             <div class="footerSashaText">Создание сайта &mdash; Карачинский</div>
+         </p>
+         </a>
+       </div>
+
+     </div>
+
+
+
+
+ </body>
+
+
+
+ </html>

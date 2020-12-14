@@ -1,0 +1,231 @@
+.padContact {
+  display: none;
+  position: fixed;
+  width: 40%;
+  padding: 3% 30% 10% 30%;
+  height: 87%;
+  background-color: var(--colorMain);
+  margin: 0;
+  z-index: 10000;
+  font-size: 0.9em;
+}
+
+.padFields {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 32px 128px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 8px;
+  margin: 0 0 0 0;
+  z-index: 5;
+  position: relative;
+  float: left;
+}
+
+.padFields-done {
+  height: 300px !important;
+}
+
+.padFields-con {
+  height: 650px !important;
+}
+
+.close {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  opacity: 0.3;
+  width: 32px;
+}
+
+.close:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.frm-buy-info {
+  width: 47%;
+  float: left;
+}
+
+.frm-container {
+  width: 90%;
+  margin: 0 0 0 0;
+  padding: 5%;
+  float: left;
+}
+
+.frm-item {
+  margin-top: 10px;
+}
+
+.frm-label {
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.6em;
+  padding-left: 6px;
+}
+
+.frm-input {
+  border-bottom: 1px solid black;
+  margin-top: 6px;
+  height: 38px;
+  width: 100%;
+}
+
+.frm-input:hover {
+  border-bottom: 1px solid var(--colorMain);
+}
+
+#formComment {
+  border: none;
+  border-bottom: 1px solid black;
+  margin-top: 6px;
+  font-size: 1.1em;
+  height: 100px;
+  text-align: left;
+  width: 100%;
+}
+
+#formComment:hover {
+  border-bottom: 1px solid var(--colorMain);
+}
+
+.frm-input select, .frm-input textarea, .frm-input input {
+  width: 99%;
+  background-color: rgba(255, 255, 255, 0);
+  background-color: none;
+  outline: none;
+  border: none;
+  font-size: 1.1em;
+  padding: 6px;
+  color: #333333;
+}
+
+.frm-input select {
+  width: 100%;
+  height: 32px;
+}
+
+.frm-send-button {
+  border-radius: 32px;
+  font-size: 0.8em;
+  width: 50%;
+  padding: 16px 0 16px 0;
+  margin: 32px 0 0px 23%;
+  background-color: black;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  opacity: 1;
+  transition: background 300ms ease;
+}
+
+.frm-send-button:hover {
+  background-color: var(--colorMain);
+  color: white;
+  transition: background 100ms ease;
+}
+
+.frm-upload-button {
+  border-radius: 32px;
+  font-size: 0.8em;
+  width: 50%;
+  padding: 16px 0 16px 0;
+  border: 1px solid black;
+  margin: 32px 0 0px 24%;
+  background-color: none;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+  opacity: 1;
+  transition: background 300ms ease;
+}
+
+.frm-upload-button:hover {
+  background-color: lightgrey;
+  border: 1px solid rgba(0, 0, 0, 0);
+  transition: background 100ms ease;
+}
+
+.frm-upload-img {
+  width: 18px;
+  margin: 0 8px -5px 0;
+}
+
+.frm-send-info {
+  margin-top: 10px;
+  font-size: 10px;
+  color: #555555;
+  text-align: center;
+}
+
+.frm-done-message {
+  padding-top: 110px;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 1.2em;
+  width: 100%;
+  text-align: center;
+  line-height: 1.4em;
+}
+
+#payPalForm {
+  display: none;
+}
+
+@media screen and (max-device-width: 640px) {
+  .padFields {
+    min-height: 94vh !important;
+  }
+
+  .padContact {
+    display: none;
+    position: fixed;
+    width: 90%;
+    padding: 5%;
+    height: 100vh !important;
+    background-color: var(--colorMain);
+    margin: 0;
+    z-index: 10000;
+    font-size: 1.2em;
+    line-height: 2em !important;
+  }
+
+  input {
+    font-family: 'Montserrat' !important;
+  }
+
+  textarea {
+    font-family: 'Montserrat' !important;
+    font-size: 0.8em !important;
+  }
+
+  .frm-item {
+    padding: 0.6vh 0;
+  }
+
+  .frm-send-button, .frm-upload-button {
+    padding: 2vw !important;
+    border-radius: 128px;
+    width: calc(80% - 4vw) !important;
+    margin: 1vh 0 -3% 10% !important;
+  }
+
+  #formComment {
+    height: 10vh !important;
+  }
+
+  .close {
+    width: 64px !important;
+  }
+
+  .frm-label {}
+
+  .frm-input {
+    font-size: 1em !important;
+    border-bottom: 1px solid grey !important;
+    height: 68px !important;
+    padding: 18px !important;
+  }
+}

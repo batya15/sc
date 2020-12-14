@@ -1,0 +1,1179 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,400,700,900&subset=cyrillic');
+@import url("//hello.myfonts.net/count/3be3c3");
+
+@font-face {
+  font-family: 'RFDewiExpanded-Black';
+  src: url('../webFonts/RFDewiExpanded-Black/font.woff2') format('woff2'), url('../webFonts/RFDewiExpanded-Black/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'RFDewiExpanded-Regular';
+  src: url('../webFonts/RFDewiExpanded-Regular/font.woff2') format('woff2'), url('../webFonts/RFDewiExpanded-Regular/font.woff') format('woff');
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: black;
+  background: #F6CA64;
+}
+
+::selection {
+  color: black;
+  background: #F6CA64;
+}
+
+/* Глобально */
+:root {
+  --colorMain: blue;
+  /*#1A7FF6;*/
+  --colorOldBlue: #1A7FF6;
+  --colorMainBG: #F3EFEB;
+  --colorLink: #f7ba2c;
+  --colorMainSecondary: #F6CA64;
+  --colorMainTransparent: rgba(255, 204, 0, 0.90);
+  --colorShadow: #d0beac;
+  --globalPadding: 12vw;
+  --logoScale: 100%;
+  --radius: 32px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  padding: 0;
+  margin: 0;
+  margin-right: 0px;
+  font-weight: 300;
+  background-color: var(--colorMainBG);
+  font-weight: 400;
+  transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.175);
+  overflow-x: hidden;
+}
+
+div {}
+
+.preloader {
+  display: block;
+  z-index: 10001;
+  opacity: 1;
+  background-color: var(--colorOldBlue);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  transition: all ease 300ms;
+  display: none;
+}
+
+.preloaderLogo {
+  left: 45vw;
+  top: 45vh;
+  position: relative;
+  stroke-dasharray: 150;
+  stroke-dashoffset: 0;
+  animation: draw 4s ease infinite alternate;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 150;
+  }
+}
+
+.guides {
+  position: fixed;
+  left: 4vw;
+  top: -0.5vh;
+  height: 101vh;
+  width: 8vw;
+  border: 1px solid white;
+  z-index: 0;
+  display: none;
+}
+
+.guides2 {
+  position: fixed;
+  left: 4vw;
+  top: -0.5vh;
+  height: 101vh;
+  width: 4vw;
+  border: 1px dotted white;
+  z-index: 0;
+  display: none;
+}
+
+.menuGhost {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12vh;
+  z-index: 9999;
+}
+
+.menu {
+  position: fixed;
+  top: 1.5em;
+  left: 5vw;
+  width: 2vw;
+  height: 1vw;
+  z-index: 9999;
+  padding: 0.8em 1vw;
+  border-radius: 64px;
+  transition: all ease 300ms;
+}
+
+.menu:hover {
+  cursor: pointer;
+  top: 1vw;
+  left: 4vw;
+  background-color: white;
+  padding: 2vw;
+  transition: all ease 200ms;
+  box-shadow: 0 16px 96px rgba(255, 255, 255, 1)
+}
+
+.menu:hover path {
+  transition: all ease 200ms;
+  stroke: var(--colorMain) !important;
+}
+
+a, a:visited {
+  color: var(--colorMain);
+  border-bottom: 1px solid var(--mainColor);
+  transition: all ease 400ms;
+}
+
+a:hover {
+  color: var(--colorLink);
+  transition: all ease 100ms;
+}
+
+a:hover>img {
+  border: none !important;
+}
+
+.topText {
+  display: block;
+  overflow: hidden;
+  width: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+li:before {
+  content: "— ";
+  margin: 0 0 22px -1.8vw;
+}
+
+.brandFont {
+  font-family: RFDewiExpanded-Regular, 'RF Dewi Expanded';
+  font-size: 1.1em;
+  line-height: 1.1em;
+}
+
+.brandFont li {
+  padding: 0 0 0.6em 0;
+}
+
+.brandFont li:before {
+  margin: 0 0 0 -1.1em;
+}
+
+h1 {
+  font-family: RFDewiExpanded-Black, 'RF Dewi Expanded';
+  font-size: calc(2em + 1vw);
+  line-height: 1.2em;
+  padding: 0;
+  margin: 0vw 0 2vw 0;
+}
+
+h3 {
+  font-family: 'Montserrat', Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+
+.joinLink {
+  text-decoration: none;
+  border-bottom: 1px dashed blue;
+}
+
+.joinLink:hover {
+  border: none;
+}
+
+.hTeam {
+  font-size: 7vw;
+  line-height: 0.9em;
+  padding: 0 0 5vh 0;
+}
+
+.logo {
+  display: block;
+  position: absolute;
+  padding: 0;
+  margin: 15vh 0 0 0;
+  width: 24em;
+  z-index: 9998;
+  left: 1vw;
+}
+
+.logoGreyNotext {
+  display: block;
+  width: 7vw;
+  margin: -5vw 93vw 1vw 0;
+}
+
+.instruments {}
+
+.instruments img {
+  float: left;
+  height: 100px;
+  padding: 3%;
+}
+
+.decorBigMechanism {
+  margin-top: 5vw;
+  height: 80vw;
+  margin: -40vw 0 -40vw -30vw;
+  z-index: -100;
+  float: left;
+  opacity: 0.05;
+}
+
+.logoCircle {
+  right: 12.5vw;
+  z-index: 9999;
+  width: 15vw;
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 400ms;
+  bottom: 12.5vw;
+  transform: rotate(1deg);
+  position: absolute;
+}
+
+.decorRight {
+  position: absolute;
+  bottom: 5vw;
+  right: 5vw;
+  width: 30vw;
+  z-index: 0;
+  float: right;
+  opacity: 1;
+}
+
+.padLogos {
+  float: left;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.padPhotos {
+  float: left;
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.padPhotos {
+  display: block;
+}
+
+.lifePhotos {}
+
+.logosLine {
+  margin-top: 4vw;
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 400ms;
+}
+
+.photoCEO {
+  clip-path: circle(50% at center);
+  -webkit-clip-path: circle(50% at center);
+  width: 80%;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  float: left;
+  z-index: 1;
+}
+
+.photoCEOShadow {
+  clip-path: circle(50% at center);
+  background-image: url('../i/bg_2.gif');
+  background-size: cover;
+  z-index: 0;
+  height: 700px;
+  width: 140%;
+  margin: 0 0 -8000px -35%;
+  padding: 0 0 0 0;
+  float: left;
+}
+
+.photoMask {
+  -webkit-clip-path: url(#maskHex);
+  clip-path: url(#maskHex);
+  width: 86% !important;
+  margin: 0 10vw 0 0vw;
+}
+
+.photoHex {
+  position: relative;
+  /*box-shadow: 0px 32px 328px black;*/
+  margin: 0 0 0vw 4vw;
+  padding: 0;
+  width: 42vw;
+}
+
+.padSupremes {
+  float: left;
+  background-image: url('../i/bg_logo_shadowed.png');
+  width: 100vw;
+  padding-bottom: 33vh !important;
+  margin: 0 0 0 0;
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  font-size: 1.2em;
+  line-height: 1.2
+}
+
+.padSupremes .itemHalf {
+  width: 30% !important;
+  padding-right: 10%;
+}
+
+.padContacts {
+  margin: 0vw auto 0 auto !important;
+  padding-bottom: 0 !important;
+}
+
+.photoMask {}
+
+.paddingBottom {
+  float: left;
+  margin-bottom: 12vh !important;
+}
+
+.photoHR {
+  position: absolute;
+  left: -15vw;
+}
+
+.photoTeam {
+  position: absolute;
+  right: 0;
+  bottom: -20vw;
+}
+
+.photoStudy {
+  margin: -25vw 0vw -12.5vw 0 !important;
+}
+
+.btnSendCV {
+  float: left;
+  margin: 0 0 10vw 0;
+  font-family: RFDewiExpanded-Regular, 'RF Dewi Expanded';
+  font-style: normal;
+  font-size: 1.4vw;
+  line-height: 18px;
+  letter-spacing: 0.1vw;
+  text-transform: uppercase;
+  padding: 3vw 4vw;
+  color: white;
+  background: var(--colorMain);
+  box-shadow: 0px 34px 88px rgba(173, 161, 148, 0.5), 0px 37px 128px rgba(32, 129, 245, 0.5), inset 0 -8px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 270px;
+  transition: all ease 400ms;
+  position: relative;
+  z-index: 9999;
+}
+
+.btnSendCV:hover {
+  color: black;
+  background-color: var(--colorMainSecondary);
+  transition: all ease 200ms;
+  cursor: pointer;
+  box-shadow: 0 32px 96px var(--colorMainSecondary), 0px 37px 128px var(--colorMainSecondary), inset 0 -8px 0 rgba(0, 0, 0, 0.02);
+}
+
+.hrBTN {
+  transition: all ease 400ms;
+  position: relative;
+  margin: 35vw 0 -7vw 17vw;
+  width: 7vw;
+  background-color: white;
+  border-radius: 124px;
+}
+
+.hrBTN:hover {
+  transition: all ease 100ms;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.decorProducts {
+  float: right;
+  margin: -8vw 0 0 0;
+  width: 30vw;
+  stroke: var(--colorMain) !important;
+}
+
+.container {
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.175) 400ms;
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 0 0 0 0;
+  z-index: 999;
+}
+
+.personName {
+  font-family: RFDewiExpanded-Regular;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.photoOffice {
+  background-color: blue;
+  position: relative;
+  float: right;
+  width: 50vw;
+  height: 35vw;
+  background-image: url('../i/office_1.jpg');
+  background-size: cover;
+  border-radius: var(--radius);
+  box-shadow: 0 16px 96px rgba(0, 0, 0, 0.3);
+  margin: -37vw -6vw 0 0;
+}
+
+.blink {
+  opacity: 1;
+  transition: opacity ease 100ms;
+}
+
+.product {
+  border-radius: var(--radius);
+  box-shadow: 0 46px 96px rgba(0, 0, 0, 0.05), inset 0 -32px 94px rgba(255, 255, 255, 0.5), inset 0 -8px 0 rgba(255, 255, 255, 0.2) !important;
+  margin: 5vw 0;
+  min-height: 35vw;
+  color: white;
+  position: relative;
+  width: 92vw;
+  float: left;
+}
+
+.productImage {
+  display: block;
+  float: left;
+}
+
+.productText {
+  width: 35vw;
+  float: left;
+  padding: 5vw 0 7vw 0;
+}
+
+.productExtra {
+  font-size: 0.9em;
+  clear: both;
+  color: #333;
+  background-color: white;
+  width: 79vw;
+  padding: 3vw 5vw 5vw 8vw;
+  display: block;
+  border-radius: 0 0 var(--radius) var(--radius);
+  display: none;
+  /*height: 0!important;
+  overflow: hidden;
+  padding: 0;
+
+  transition: all ease 1000ms;*/
+}
+
+.product img {
+  width: 30vw;
+  margin: 0 !important;
+  padding: 5vw 10vw 5vw 7vw;
+}
+
+.pad {
+  clear: both;
+  float: left;
+  position: relative;
+  width: 92vw;
+  margin: 4vw 4vw 4vw 4vw;
+  padding-bottom: 5vw;
+}
+
+.padAchievements {
+  background-color: white;
+  box-shadow: 0px 64px 96px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10vw;
+  margin-top: 24vw;
+  padding-bottom: 2vw !important;
+}
+
+.padProducts {
+  margin: 0;
+}
+
+.padStudy {
+  background-color: white;
+  box-shadow: 0px 64px 96px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10vw;
+  margin-top: 2vw;
+  padding: 4vw 0 4vw 4vw;
+  width: 86vw;
+  border-right: 2vw solid blue;
+}
+
+.padStudy ul {
+  text-transform: uppercase;
+  letter-spacing: 0.2vw;
+  font-size: 1vw;
+  padding: 4vw 4vw 0 0;
+  line-height: 1.4em;
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 1em;
+  text-indent: 0.3em;
+}
+
+.padStudy li {
+  padding-bottom: 1vw;
+}
+
+.bgColor {
+  background-color: var(--colorMainSecondary);
+  display: inline;
+}
+
+.notify {
+  width: 2vw;
+  height: 2vw;
+  margin: -2vw 0 0 0;
+  background-color: #FF4747;
+  color: white;
+  font-size: 3vw;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 64px;
+}
+
+.padVacancy {
+  clear: both;
+  border-radius: 32px;
+  background-color: white;
+  box-shadow: 0px 64px 96px #DFD3C6;
+  margin-bottom: 8vw;
+  margin-top: 2vw;
+  padding: 4vw 4vw 4vw 4vw;
+  width: 85vw;
+}
+
+.padVacancy a {
+  transition: all ease 200ms;
+  padding: 24px 32px 24px 32px;
+  margin: -24px -32px -24px -32px;
+  border-radius: 128px;
+  font-family: RFDewiExpanded-Regular, 'RF Dewi Expanded';
+}
+
+.padVacancy a:hover {
+  transition: all ease 200ms;
+  color: white;
+  background-color: var(--colorMain);
+  border-bottom: 2px dashed rgba(0, 0, 0, 0);
+}
+
+.padVacancyMenu {
+  clear: both;
+  border-radius: 132px;
+  font-size: 1.2em;
+  margin: 2vw 0 0vw calc(var(--globalPadding) - 22px);
+  padding: 4vw 14vw 4vw 0;
+  width: 90vw !important;
+  font-family: RFDewiExpanded-Regular, 'RF Dewi Expanded';
+}
+
+.padVacancyMenu small {
+  font-family: 'Montserrat' !important;
+  font-size: 0.6em;
+}
+
+.padVacancyMenu>a {
+  transition: all ease 200ms;
+  line-height: 1.1em !important;
+  color: black;
+  padding: 18px;
+  display: block;
+  text-decoration: none;
+  color: black;
+  width: 28%;
+  height: 80px;
+  float: left;
+}
+
+.padVacancyMenu>a:hover {
+  transition: all ease 200ms;
+  background-color: blue;
+  color: white;
+  box-shadow: 0px 8px 128px #F6CA64;
+}
+
+small {
+  font-size: 0.9em;
+}
+
+.vacancySelected {
+  background-color: #F6CA64;
+  box-shadow: 0px 8px 128px #F6CA64;
+}
+
+.vacancySelectedMenu {
+  font-family: RFDewiExpanded-Black, 'RF Dewi Expanded';
+  display: inline-block;
+  background: var(--colorMainBG);
+  border-radius: 64px;
+  margin-left: -32px;
+  color: black;
+  padding: 24px 32px 24px 32px;
+  font-weight: bold;
+}
+
+.mapMoscow {}
+
+.mapSpb, .mapY {
+  display: none;
+}
+
+.vacancyDescr {
+  margin-top: 5vw;
+  padding: 2vw !important;
+  background-color: rgba(255, 255, 255, 1) !important;
+  display: none;
+}
+
+.check {
+  position: fixed;
+  z-index: 10000;
+  bottom: 2vw;
+  right: 2vw;
+}
+
+.padHR {
+  position: relative;
+  background-color: var(--colorMainBG);
+  background-attachment: fixed;
+  box-shadow: 0px 64px 96px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15vw;
+  margin-top: 10vw;
+  border-radius: var(--radius);
+  color: #212121;
+  padding: 5vw 0 0vw 0;
+  border: 12px solid var(--colorMain);
+}
+
+.padHR a {
+  color: blue;
+  border-bottom: 1px solid blue;
+}
+
+.padHRbottomDecor {
+  z-index: 0;
+  float: left;
+  width: 80vw;
+  background-color: white;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius);
+  height: 20vw;
+  margin: -33vw 0 0 10vw;
+}
+
+.padHRbottomDecor2 {
+  z-index: 0;
+  float: left;
+  width: 70vw;
+  background-color: white;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius);
+  height: 20vw;
+  margin: -31vw 0 0 15vw;
+}
+
+.linkHR {
+  position: relative;
+  float: left;
+  background-color: white;
+  transition: all ease 400ms;
+  font-size: 3vw;
+  margin: 3vw 2vw 3vw -44px;
+  padding: 26px 44px;
+  text-decoration: underline;
+  border-radius: 64px;
+}
+
+.linkHR:hover {
+  transition: all ease 200ms;
+  background-color: var(--colorMain);
+  color: white;
+}
+
+.product__link {
+  display: inline-flex;
+  padding: 16px 38px;
+  border-radius: 32px;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin: 4vw 50% 0 -1vw;
+  transition: all ease 200ms;
+}
+
+.product__link:hover {
+  transition: all ease 100ms;
+  color: white !important;
+  background-color: black !important
+}
+
+.achBlock {
+  width: 40vw;
+  float: left;
+}
+
+.achNumbers {
+  display: block;
+  float: left;
+  width: 50vw;
+  font-size: 7vw;
+  font-family: RFDewiExpanded-Regular, 'RF Dewi Expanded';
+  font-weight: 100;
+  margin-top: 6vw;
+}
+
+.achText {
+  display: block;
+  float: left;
+  width: 30vw;
+  font-family: RFDewiExpanded-Regular, 'RF Dewi Expanded';
+  font-weight: 100;
+  padding: 5vw 0 3vw 0;
+}
+
+.email {
+  font-size: 2vw;
+}
+
+.sky-video {
+  float: left;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 230vh;
+  margin-bottom: -230vh;
+  background: url('../i/bg_2c.gif');
+  background-size: 100%;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.icon {
+  width: 14vw;
+}
+
+@keyframes animateIcon {
+  0% {
+    stroke-dashoffset: 200;
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: -200;
+  }
+}
+
+/*  path {fill: transparent; stroke-width: 5!important; transform: scale(1.4);}
+*/
+.arrows {
+  position: relative;
+  float: left;
+  margin: -40vw 0 0 32vw;
+  display: none;
+}
+
+.arrowLeft {
+  transform: rotate(180deg);
+  padding-left: 4vw;
+}
+
+.arrow {
+  transition: all ease 400ms;
+  padding: 24px;
+  border-radius: 64px;
+}
+
+.arrow:hover {
+  transition: all ease 200ms;
+  background-color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+.arrowProducts {
+  position: absolute;
+  bottom: -2vw;
+  left: 43vw;
+  margin: 0 !important;
+  transition: all ease 300ms;
+  padding: 30px 30px !important;
+  background-color: white;
+  border-radius: 264px;
+  width: 22px !important;
+}
+
+.arrowProducts:hover {
+  opacity: 0.8;
+  transition: all ease 200ms;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.flip {
+  transform: rotate(-45deg);
+}
+
+.bgBlue {
+  background-color: var(--colorOldBlue);
+  padding: 30vh 0 0 0;
+  float: left;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 200vh;
+  margin-bottom: -200vh;
+  z-index: 0;
+}
+
+.marginA {
+  display: block;
+  float: left;
+  margin: 0 0 0 12vw;
+  padding: 0;
+}
+
+.marginB {
+  margin-left: 4vw;
+  width: 85vw;
+}
+
+.marginC {
+  margin-left: 3vw;
+}
+
+.item {
+  position: relative;
+  float: left;
+  padding: 32px 0 32px 0;
+}
+
+.hidden {}
+
+.itemHalf {
+  position: relative;
+  float: left;
+  width: 40% !important;
+  padding: 0 0 0 0;
+  margin-right: 1vw !important;
+}
+
+.itemText {
+  position: relative;
+  float: left;
+  width: 45%;
+  padding: 0 0 10% 0;
+  margin-right: 0%;
+}
+
+.itemThird {
+  width: 25vw;
+  padding-right: 1vw;
+  float: left;
+}
+
+.padMap {
+  float: left;
+  border-radius: 32px;
+  padding: 0px;
+  background-color: white;
+  border: 0px solid var(--colorMainBG);
+  box-shadow: 0px 34px 146px #baaa98;
+  width: 92vw !important;
+  overflow: hidden !important;
+}
+
+.padTech {
+  padding: 10vh 45vw 25vh 0 !important;
+  overflow: hidden;
+}
+
+iframe {
+  border: none;
+  width: 100%;
+  height: 70vh;
+  border-radius: 32px !important;
+}
+
+.contactsPhoto {
+  width: 27vw;
+  display: block;
+  background-color: red;
+  margin: 0 12vw -8vw -8vw;
+  display: none;
+}
+
+.contactsPhone {
+  font-family: RFDewiExpanded-Regular, 'RF Dewi Expanded';
+  font-size: 2vw;
+  line-height: 1.4em;
+}
+
+.contactsPhone a {
+  display: block;
+  font-weight: 900;
+  line-height: 1.1em;
+  margin-bottom: -2vw;
+  font-size: 1.4vw;
+}
+
+.logoFooter {
+  width: 19vw;
+  margin: 2vw 0 0 2vw;
+}
+
+.alignRight {
+  float: right;
+  text-align: right;
+  padding-right: 0;
+}
+
+.padFooter {
+  float: left;
+  font-size: 0.9em;
+  font-family: RFDewiExpanded-Regular, 'RF Dewi Expanded';
+  padding-bottom: 0 !important;
+}
+
+.menuBG {
+  display: none;
+}
+
+.footerSocial {
+  padding: 0 0 0 3vw;
+}
+
+.footerSocial:hover {
+  opacity: 0.7
+}
+
+.footerSasha {
+  display: none;
+  float: right;
+  clear: both;
+  width: 15%;
+  padding: 2vw 0 1vw 70%;
+}
+
+.footerSashaText {
+  margin-top: 4vw;
+  clear: both;
+  float: right;
+}
+
+.number_one, .number_two {
+  display: none;
+}
+
+.number_one {
+  width: 2vw;
+  margin: 0 6.5vw -8vh -9vw;
+}
+
+.number_two {
+  width: 10vw;
+  margin: -10vh 0 0 -10vw;
+}
+
+.logoYellow {
+  width: 15vw;
+  margin: 0 -1vw 0 -3vw;
+  clear: both;
+  float: left;
+}
+
+.number_four {
+  height: 20vw;
+  left: 0px;
+  margin: -19.5vw 0 0 5vw;
+}
+
+.sky-video__container {}
+
+.bg__mask_circle {
+  width: 100vw;
+  margin: 0 0 -85vw 0;
+}
+
+div {}
+
+.decor__sculpture {
+  display: block;
+  float: left;
+  position: relative;
+  width: 50vw;
+  margin: -65vw 0 -45vh 0;
+  z-index: 9999;
+}
+
+.logoPixel {
+  position: absolute;
+  top: 190vh;
+  right: 3vw;
+  width: 65vw;
+  opacity: 1;
+  z-index: 99999;
+  display: none;
+}
+
+.menuGlow {
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.175) 300ms;
+  position: fixed;
+  left: 0;
+  top: -120px;
+  width: 100vw;
+  height: 120px;
+  background-color: #f7cc65;
+  background: url('../i/bg_menu_2.gif');
+  /*background: url('../i/menubg.jpg');*/
+  background-size: 120% 120%;
+  background-position: center;
+  z-index: 9998;
+  opacity: 1;
+}
+
+.menuTop {
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 300ms;
+  position: absolute;
+  left: 12vw;
+  top: 0;
+  margin-top: 35px;
+  font-family: RFDewiExpanded-Black, 'RF Dewi Expanded';
+  font-size: calc(0.2em + 1vw);
+  z-index: 9999;
+  width: 88vw;
+}
+
+.menuTop>a {
+  display: block;
+  float: left;
+  transition: all ease 400ms;
+  color: black;
+  text-decoration: none;
+  margin-right: 32px;
+  padding-bottom: 2px;
+}
+
+.menuTop>a:hover {
+  transition: all ease 200ms;
+  color: white;
+  font-size: 110%;
+}
+
+.menuTop>a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: white;
+  transition: width .3s;
+}
+
+.menuTop>a:hover::after {
+  width: 100%;
+  transition: width .3s;
+}
+
+.phone {
+  float: left;
+  padding: 3vw 0 0 5vw;
+  font-size: 2.3vw;
+  font-family: RFDewiExpanded-Regular, 'RF Dewi Expanded';
+}
+
+.contacts {
+  float: left;
+  padding: 0vw 0 0 5vw;
+  font-size: 1.8vw;
+  font-family: RFDewiExpanded-Regular, 'RF Dewi Expanded';
+}
+
+.contactsInfo {
+  font-size: 2.2em;
+}
+
+.iconBG {
+  width: 3vw;
+  margin: 0vw 2vw -1vw 0;
+}
+
+.lang {
+  position: relative;
+  float: right;
+  right: 10vw;
+  font-family: 'Montserrat';
+  color: white;
+  margin: 0vh 0 0 16px;
+}
+
+.lang__selected {
+  display: inline;
+  color: black;
+  background: white;
+  padding: 12px 24px;
+  border-radius: 64px;
+}
+
+.lang>a {
+  transition: all ease 400ms;
+  color: black;
+  border: none;
+  text-decoration: none;
+  margin-left: 0px;
+  padding: 12px 24px;
+  border-radius: 64px;
+}
+
+.lang>a:hover {
+  transition: all ease 400ms;
+  color: white;
+  background: blue;
+}
+
+.text-intro {
+  font-family: RFDewiExpanded-Black, 'RF Dewi Expanded';
+  font-size: 1.6vw;
+  color: white;
+  width: 65vw;
+  line-height: normal;
+  margin-bottom: 4vw;
+}
